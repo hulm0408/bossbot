@@ -1,0 +1,22 @@
+{
+  "name": "bossbot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Two Swiggy links in, one tap, tracking link out — all inside Telegram.",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "node test_flow.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "jsqr": "^1.4.0",
+    "puppeteer-core": "^25.14.0",
+    "qrcode": "^1.5.4",
+    "telegraf": "^4.16.3"
+  }
+}

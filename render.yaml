@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: bossbot
+    runtime: node
+    plan: starter
+    region: singapore
+    branch: main
+    autoDeploy: true
+    buildCommand: npm install --omit=dev --ignore-scripts
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: BOT_TOKEN
+        sync: false
+      - key: BOSS_IDS
+        sync: false
+      - key: POLL_MS
+        value: "15000"
+    disk:
+      name: bossbot-data
+      mountPath: /opt/render/project/src/vendor/data
+      sizeGB: 1
